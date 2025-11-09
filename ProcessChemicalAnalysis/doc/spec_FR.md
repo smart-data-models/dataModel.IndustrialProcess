@@ -1,29 +1,31 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Error: An unexpected error occurred during translation.  
-=======================================================<!-- /10-Header -->  
+Entité : AnalyseChimiqueDeProcessus  
+===================================<!-- /10-Header -->  
 <!-- 15-License -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+[Licence Ouverte](https://github.com/smart-data-models//dataModel.IndustrialProcess/blob/master/ProcessChemicalAnalysis/LICENSE.md)  
+[document généré automatiquement](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+Description globale : **Schéma pour les analyses chimiques issues des procédés industriels**  
+version : 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
-- `address[object]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Error: An unexpected error occurred during translation.    
-	- `postOfficeBoxNumber[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Error: An unexpected error occurred during translation.    
-- `alternateName[string]`: Error: An unexpected error occurred during translation.  - `areaServed[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Error: An unexpected error occurred during translation.  	- `chemicalConcentration[array]`: Error: An unexpected error occurred during translation.    
-	- `sampleNumber[number]`: Error: An unexpected error occurred during translation.    
-- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Error: An unexpected error occurred during translation.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: Error: An unexpected error occurred during translation.  - `source[string]`: Error: An unexpected error occurred during translation.  - `type[string]`: Error: An unexpected error occurred during translation.  <!-- /30-PropertiesList -->  
+
+## Liste de propriétés  
+
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou des formats/modèles différents</sub></sup>  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Le pays. Par exemple, l'Espagne  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localité où se trouve l'adresse, et qui est dans la région.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La région dans laquelle se trouve la localité, et qui est dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local.    
+	- `postOfficeBoxNumber[string]`: Le numéro de boîte postale pour les adresses de boîte postale. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'adresse postale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
+- `alternateName[string]`: Un autre nom pour cet article  - `areaServed[string]`: La zone géographique où un service ou un article est proposé  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Informations concernant l'analyse chimique effectuée  	- `chemicalConcentration[array]`: Les composants dans la composition chimique du matériau    
+	- `sampleNumber[number]`: Numéro d'échantillon si plusieurs échantillons sont prélevés pendant un processus    
+- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Ceci sera généralement alloué par la plateforme de stockage  - `dateModified[date-time]`: Horodatage de la dernière modification de l'entité. Ceci sera généralement alloué par la plateforme de stockage.  - `dateObserved[date-time]`: Date de l'entité observée définie par l'utilisateur  - `description[string]`: Une description de cet article  - `heatNumber[number]`: Numéro de chaleur de production connexe  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir de Point, LineString, Polygon, MultiPoint, MultiLineString ou MultiPolygon.  - `name[string]`: Le nom de cet objet  - `owner[array]`: Une liste contenant une séquence de caractères encodée en JSON référençant les identifiants uniques du ou des propriétaires.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: Error: An unexpected error occurred during translation.  - `source[string]`: Error: An unexpected error occurred during translation.  - `type[string]`: Error: An unexpected error occurred during translation.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Error: An unexpected error occurred during translation.  
 - `chemicalAnalysis`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
