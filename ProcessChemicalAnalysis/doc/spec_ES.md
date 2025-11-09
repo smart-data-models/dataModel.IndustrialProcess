@@ -23,16 +23,16 @@ Error: An unexpected error occurred during translation.
 	- `streetNr[string]`: Error: An unexpected error occurred during translation.    
 - `alternateName[string]`: Error: An unexpected error occurred during translation.  - `areaServed[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Error: An unexpected error occurred during translation.  	- `chemicalConcentration[array]`: Error: An unexpected error occurred during translation.    
 	- `sampleNumber[number]`: Error: An unexpected error occurred during translation.    
-- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los IDs únicos del propietario(s).  - `processName[string]`: Nombre o identificador del proceso de producción relacionado  - `seeAlso[*]`: lista de URI que apuntan a recursos adicionales sobre el elemento  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de origen, o la URL al objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Debe ser ProcessChemicalAnalysis  <!-- /30-PropertiesList -->  
+- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Error: An unexpected error occurred during translation.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: Error: An unexpected error occurred during translation.  - `source[string]`: Error: An unexpected error occurred during translation.  - `type[string]`: Error: An unexpected error occurred during translation.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Propiedades requeridas  
+Error: An unexpected error occurred during translation.  
 - `chemicalAnalysis`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-Este modelo de datos proporciona datos relacionados con análisis químicos realizados en una planta de proceso. El modelo de datos ha sido desarrollado a partir de las necesidades de la siderurgia, pero se espera que estructuras de datos similares sean apropiadas también en otras áreas de aplicación. El proceso puede ser un proceso por lotes o continuo.  
+Error: An unexpected error occurred during translation.  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Descripción de las propiedades del modelo de datos  
-Ordenado alfabéticamente (clic para detalles)  
+## Error: An unexpected error occurred during translation.  
+Error: An unexpected error occurred during translation.  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -461,8 +461,8 @@ ProcessChemicalAnalysis:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Cargas útiles de ejemplo    
-#### Ejemplo de valores clave NGSI-v2 para Procesamiento de Análisis Químico  
+Error: An unexpected error occurred during translation.  
+Error: An unexpected error occurred during translation.  
 Error: An unexpected error occurred during translation.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
