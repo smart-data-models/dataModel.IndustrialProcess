@@ -11,28 +11,30 @@
 version: 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
-List of properties  
-<sup><sub>[*] If an attribute's type is not specified, it's because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: The locality where the street address is located, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: The region in the country where the locality is.  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+
+## List of properties  
+
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
-	- `postOfficeBoxNumber[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Error: An unexpected error occurred during translation.    
-- `alternateName[string]`: Error: An unexpected error occurred during translation.  - `areaServed[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Error: An unexpected error occurred during translation.  	- `chemicalConcentration[array]`: Error: An unexpected error occurred during translation.    
-	- `sampleNumber[number]`: Error: An unexpected error occurred during translation.    
-- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Error: An unexpected error occurred during translation.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: Error: An unexpected error occurred during translation.  - `source[string]`: Error: An unexpected error occurred during translation.  - `type[string]`: Error: An unexpected error occurred during translation.  <!-- /30-PropertiesList -->  
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Information about the chemical analysis performed  	- `chemicalConcentration[array]`: The components in the chemical composition of the material    
+	- `sampleNumber[number]`: Sample number if multiple samples are taken during a process    
+- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date-time]`: Date of the observed entity defined by the user  - `description[string]`: A description of this item  - `heatNumber[number]`: Related production heat number  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `processName[string]`: Name or identifier of the related production process  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be ProcessChemicalAnalysis  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Error: An unexpected error occurred during translation.  
+Required properties  
 - `chemicalAnalysis`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-Error: An unexpected error occurred during translation.  
+This data model delivers data related to chemical analyses performed in a process plant. The data model has been developed from the needs of steelmaking, but similar data structures are expected appropriate in other application areas as well. The process can be a batch process or continuous.  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -461,9 +463,9 @@ ProcessChemicalAnalysis:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+## Example payloads    
+#### ProcessChemicalAnalysis NGSI-v2 key-values Example    
+Here is an example of a ProcessChemicalAnalysis in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -490,8 +492,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+#### ProcessChemicalAnalysis NGSI-v2 normalized Example    
+Here is an example of a ProcessChemicalAnalysis in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -552,8 +554,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+#### ProcessChemicalAnalysis NGSI-LD key-values Example    
+Here is an example of a ProcessChemicalAnalysis in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -583,8 +585,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+#### ProcessChemicalAnalysis NGSI-LD normalized Example    
+Here is an example of a ProcessChemicalAnalysis in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -652,10 +654,10 @@ ProcessChemicalAnalysis:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
-Error: An unexpected error occurred during translation.  
+These data models were developed in the project ALCHIMIA - Data and decentralized Artificial intelligence for a competitive and green European metallurgy industry. This project has received funding from the European Union’s Horizon 2020 research and innovation program under grant agreement No 101070046. See https://alchimia-project.eu/  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Error: An unexpected error occurred during translation.  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
