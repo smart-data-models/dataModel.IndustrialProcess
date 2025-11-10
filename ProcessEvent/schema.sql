@@ -1,0 +1,3 @@
+/* (Beta) Export of data model ProcessEvent of the subject dataModel.IndustrialProcess for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE ProcessEvent_type AS ENUM ('ProcessEvent');
+CREATE TABLE ProcessEvent (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, dateObserved TIMESTAMP, description TEXT, heatNumber NUMERIC, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, processEvent TEXT, processName TEXT, seeAlso JSON, source TEXT, type ProcessEvent_type);
