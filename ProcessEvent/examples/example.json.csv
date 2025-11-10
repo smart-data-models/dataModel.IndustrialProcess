@@ -1,0 +1,2 @@
+"id_", "type_", "dateObserved_", "processName_", "heatNumber_", "processEvent_"
+"urn:ngsi-ld:ProcessEvent:PlantZ:UnitProcessX:45612389", "ProcessEvent", "2025-07-17T14:07:00Z", "unit_process_x", "10001", "heat_end"
