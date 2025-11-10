@@ -4,6 +4,8 @@ These are generic data models for process industry. The models have been develop
 ### List of data models
 
 The following entity types are available:
+- [MaterialAddition](https://github.com/smart-data-models/dataModel.IndustrialProcess/blob/master/MaterialAddition/README.md). Schema for material additions to industrial processes
+
 - [ProcessChemicalAnalysis](https://github.com/smart-data-models/dataModel.IndustrialProcess/blob/master/ProcessChemicalAnalysis/README.md). Schema for chemical analyses from industrial processes
 
 - [ProcessEvent](https://github.com/smart-data-models/dataModel.IndustrialProcess/blob/master/ProcessEvent/README.md). Schema for generic events in industrial processes
