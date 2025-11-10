@@ -1,7 +1,9 @@
 {
     "@context": {
+        "MaterialAddition": "https://smartdatamodels.org/dataModel.IndustrialProcess/MaterialAddition",
         "ProcessChemicalAnalysis": "https://smartdatamodels.org/dataModel.IndustrialProcess/ProcessChemicalAnalysis",
         "ProcessEvent": "https://smartdatamodels.org/dataModel.IndustrialProcess/ProcessEvent",
+        "addedMaterials": "https://smartdatamodels.org/dataModel.IndustrialProcess/addedMaterials",
         "address": "https://smartdatamodels.org/address",
         "addressCountry": "https://smartdatamodels.org/addressCountry",
         "addressLocality": "https://smartdatamodels.org/addressLocality",
@@ -12,8 +14,10 @@
             "@container": "@list",
             "@id": "https://purl.org/geojson/vocab#bbox"
         },
+        "category": "https://smartdatamodels.org/dataModel.IndustrialProcess/category",
         "chemicalAnalysis": "https://smartdatamodels.org/dataModel.IndustrialProcess/chemicalAnalysis",
         "chemicalConcentration": "https://smartdatamodels.org/dataModel.IndustrialProcess/chemicalConcentration",
+        "code": "https://smartdatamodels.org/dataModel.IndustrialProcess/code",
         "coordinates": {
             "@container": "@list",
             "@id": "https://purl.org/geojson/vocab#coordinates"
@@ -27,8 +31,11 @@
         "heatNumber": "https://smartdatamodels.org/dataModel.IndustrialProcess/heatNumber",
         "id": "@id",
         "location": "https://uri.etsi.org/ngsi-ld/location",
+        "mass": "https://smartdatamodels.org/dataModel.IndustrialProcess/mass",
+        "materialPrice": "https://smartdatamodels.org/dataModel.IndustrialProcess/materialPrice",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "origin": "https://smartdatamodels.org/dataModel.IndustrialProcess/origin",
         "owner": "https://smartdatamodels.org/owner",
         "percentage": "https://smartdatamodels.org/dataModel.IndustrialProcess/percentage",
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
@@ -38,9 +45,12 @@
         "sampleNumber": "https://smartdatamodels.org/dataModel.IndustrialProcess/sampleNumber",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
+        "specificEnergy": "https://smartdatamodels.org/dataModel.IndustrialProcess/specificEnergy",
+        "storageAvailability": "https://smartdatamodels.org/dataModel.IndustrialProcess/storageAvailability",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "substance": "https://smartdatamodels.org/dataModel.IndustrialProcess/substance",
+        "supplier": "https://smartdatamodels.org/dataModel.IndustrialProcess/supplier",
         "type": "@type"
     }
 }
