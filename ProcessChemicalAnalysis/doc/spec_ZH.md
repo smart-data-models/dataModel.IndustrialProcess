@@ -1,38 +1,40 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Error: An unexpected error occurred during translation.  
-=======================================================<!-- /10-Header -->  
+实体: ProcessChemicalAnalysis  
+===========================<!-- /10-Header -->  
 <!-- 15-License -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+[开放许可证](https://github.com/smart-data-models//dataModel.IndustrialProcess/blob/master/ProcessChemicalAnalysis/LICENSE.md)  
+[自动生成文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+全局描述：**工业过程化学分析方案**  
+版本：0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
-- `address[object]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Error: An unexpected error occurred during translation.    
-	- `postOfficeBoxNumber[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Error: An unexpected error occurred during translation.    
-- `alternateName[string]`: Error: An unexpected error occurred during translation.  - `areaServed[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Error: An unexpected error occurred during translation.  	- `chemicalConcentration[array]`: Error: An unexpected error occurred during translation.    
-	- `sampleNumber[number]`: Error: An unexpected error occurred during translation.    
-- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Error: An unexpected error occurred during translation.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: Error: An unexpected error occurred during translation.  - `source[string]`: Error: An unexpected error occurred during translation.  - `type[string]`: Error: An unexpected error occurred during translation.  <!-- /30-PropertiesList -->  
+
+## 属性列表  
+
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多种类型或不同的格式/模式</sub></sup>  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地区，并且该地区位于大区内  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 该地区所在地，并且位于该国  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 一个区域是一种行政区划，在某些国家，它由地方政府管理。    
+	- `postOfficeBoxNumber[string]`: PO box 地址的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如，24004。  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 门牌号码    
+- `alternateName[string]`: 该物品的别名  - `areaServed[string]`: 提供服务或物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: 已进行的化学分析信息  	- `chemicalConcentration[array]`: 材料的化学成分中的组分    
+	- `sampleNumber[number]`: 样本编号 (若在某一过程中采集多个样本)    
+- `dataProvider[string]`: 标识协调数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[date-time]`: 实体最后修改的日期戳。这通常由存储平台分配。  - `dateObserved[date-time]`: 用户定义的实体观测日期  - `description[string]`: 该物品的描述  - `heatNumber[number]`: 相关生产热号码  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的Geojson参考。它可以是Point、LineString、Polygon、MultiPoint、MultiLineString或MultiPolygon。  - `name[string]`: 此物品的名称  - `owner[array]`: 包含引用所有者唯一标识符的 JSON 编码字符序列的列表  - `processName[string]`: 相关生产过程的名称或标识符  - `seeAlso[*]`: 指向有关该物品的附加资源的URI列表  - `source[string]`: 一个字符序列，提供实体数据的原始来源（URL）。建议使用源提供商的完全限定域名，或源对象的URL。  - `type[string]`: NGSI 实体类型。它必须是 ProcessChemicalAnalysis  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Error: An unexpected error occurred during translation.  
+必需的属性  
 - `chemicalAnalysis`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-Error: An unexpected error occurred during translation.  
+该数据模型提供与工艺工厂进行的化学分析相关的数据。该数据模型是根据炼钢的需求开发的，但预计类似的结构也适用于其他应用领域。该过程可以是批处理过程或连续过程。  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+## 属性的数据模型描述  
+按字母顺序排序（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -461,9 +463,9 @@ ProcessChemicalAnalysis:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+## 示例有效载荷  
+#### ProcessChemicalAnalysis NGSI-v2 键值对示例  
+这是一个JSON-LD格式的ProcessChemicalAnalysis示例，以键值对形式呈现。当使用`options=keyValues`时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -490,8 +492,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+#### ProcessChemicalAnalysis NGSI-v2 标准化示例  
+这是一个以规范化JSON-LD格式表示的ProcessChemicalAnalysis的示例。在不使用选项的情况下，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -552,8 +554,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+处理化学分析 NGSI-LD 键值对示例  
+这是一个以键值对形式呈现的JSON-LD格式的ProcessChemicalAnalysis示例。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -583,8 +585,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-Error: An unexpected error occurred during translation.  
-Error: An unexpected error occurred during translation.  
+#### 过程化学分析 NGSI-LD 规范化示例  
+这是一个规范化的JSON-LD格式的“过程化学分析”的例子。在不使用选项时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -652,10 +654,10 @@ ProcessChemicalAnalysis:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
-Error: An unexpected error occurred during translation.  
+这些数据模型是在ALCHIMIA项目——为有竞争力且绿色的欧洲冶金工业提供数据和去中心化人工智能——中开发的。本项目已获得欧盟“地平线2020”研究与创新计划的资助，资助协议号为101070046。请访问：https://alchimia-project.eu/  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Error: An unexpected error occurred during translation.  
+请参阅[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获取关于如何处理量纲单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
