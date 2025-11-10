@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/dataModel.ProcessIndustry/MaterialAddition/schema.json",
   "title": "Smart Data Models - Material addition event schema",
   "description": "Schema for material additions to industrial processes",
@@ -64,11 +64,7 @@
                       "maximum": 1,
                       "description": "Property. Percentage of the chemical substance"
                     }
-                  },
-                  "required": [
-                    "substance",
-                    "percentage"
-                  ]
+                  }
                 }
               },
               "specificEnergy": {
@@ -95,11 +91,7 @@
                 "type": "number",
                 "description": "Property. Units:'kg'. Current storage availability"
               }
-            },
-            "required": [
-              "code",
-              "mass"
-            ]
+            }
           }
         }
       }
