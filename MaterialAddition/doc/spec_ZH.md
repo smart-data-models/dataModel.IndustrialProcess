@@ -1,0 +1,797 @@
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+实体: 材料添加  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
+[开放许可](https://github.com/smart-data-models//dataModel.IndustrialProcess/blob/master/MaterialAddition/LICENSE.md)  
+[自动生成的文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+全局描述：**工业流程材料添加方案**  
+版本: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
+
+## 属性列表  
+
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多种类型或不同的格式/模式</sub></sup>  
+- `addedMaterials[array]`: 添加到过程中的材料  - `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地区，以及该地区所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 该地区所在的位置，该位置位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 区是行政区划的一种，在一些国家由地方政府管理。    
+	- `postOfficeBoxNumber[string]`: 邮政信箱地址的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公共街道上特定物业的编号    
+- `alternateName[string]`: 此物品的别名  - `areaServed[string]`: 提供服务或商品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 用于识别协调数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[date-time]`: 实体的最后修改时间戳。这通常由存储平台分配。  - `dateObserved[date-time]`: 用户定义的观测实体日期  - `description[string]`: 此物品的描述  - `heatNumber[number]`: 相关生产热编号  - `id[*]`: 实体的唯一标识符  - `location[*]`: Geojson 引用到该项目。它可以是 Point、LineString、Polygon、MultiPoint、MultiLineString 或 MultiPolygon  - `name[string]`: 此物品的名称  - `owner[array]`: 一个包含 JSON 编码的字符序列的列表，该序列引用所有者(们)的唯一 ID。  - `processName[string]`: 相关生产过程的名称或标识符  - `seeAlso[*]`: 指向关于该项目的其他资源的 URI 列表  - `source[string]`: 表示实体数据原始来源的 URL 字符序列。建议使用来源提供商的完全限定域名或来源对象的 URL。  - `type[string]`: NGSI实体类型。它必须是MaterialAddition  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必需属性  
+- `addedMaterials`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+该数据模型提供了与工艺装置中进行的物料添加相关的数n据。该数据模型是根据炼钢的n需求开发的，但类似的n数据结构也n有望适用于其他应用领域。该过程可以是批次n过程或连续过程。  
+<!-- /40-NotesYaml -->  
+<!-- 50-DataModelHeader -->  
+## 属性的数据模型描述  
+按字母顺序排序（点击查看详情）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+MaterialAddition:    
+  description: Schema for material additions to industrial processes    
+  properties:    
+    addedMaterials:    
+      description: The materials added into the process    
+      items:    
+        properties:    
+          category:    
+            description: Material category    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          chemicalConcentration:    
+            description: The components in the chemical composition of the material    
+            items:    
+              properties:    
+                percentage:    
+                  description: Percentage of the chemical substance    
+                  maximum: 1    
+                  minimum: 0    
+                  type: number    
+                  x-ngsi:    
+                    type: Property    
+                substance:    
+                  description: 'Chemical substance name or identifier, preferably the chemical symbol'    
+                  type: string    
+                  x-ngsi:    
+                    type: Property    
+              type: object    
+            type: array    
+            x-ngsi:    
+              type: Property    
+          code:    
+            description: Material code or identifier    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          mass:    
+            description: Mass of material added    
+            type: number    
+            x-ngsi:    
+              type: Property    
+              units: kg    
+          materialPrice:    
+            description: Material price per unit of mass in local currency    
+            type: number    
+            x-ngsi:    
+              type: Property    
+              units: 1/kg    
+          origin:    
+            description: Name or identifier of material origin    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          source:    
+            description: Name or identifier of material source    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          specificEnergy:    
+            description: The specific energy of the material    
+            type: number    
+            x-ngsi:    
+              type: Property    
+              units: kWh/kg    
+          storageAvailability:    
+            description: Current storage availability    
+            type: number    
+            x-ngsi:    
+              type: Property    
+              units: kg    
+          supplier:    
+            description: Name or identifier of material supplier    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        type: object    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    address:    
+      description: The mailing address    
+      properties:    
+        addressCountry:    
+          description: 'The country. For example, Spain'    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
+        addressLocality:    
+          description: 'The locality in which the street address is, and which is in the region'    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
+        addressRegion:    
+          description: 'The region in which the locality is, and which is in the country'    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        postOfficeBoxNumber:    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
+        postalCode:    
+          description: 'The postal code. For example, 24004'    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
+        streetAddress:    
+          description: The street address    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
+    alternateName:    
+      description: An alternative name for this item    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: The geographic area where a service or offered item is provided    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    dataProvider:    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateCreated:    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateModified:    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateObserved:    
+      description: Date of the observed entity defined by the user    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    description:    
+      description: A description of this item    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    heatNumber:    
+      description: Related production heat number    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    id:    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
+      x-ngsi:    
+        type: Relationship    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              description: BBox of the  Point    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            coordinates:    
+              description: Coordinates of the Point    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              description: BBox coordinates of the LineString    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            coordinates:    
+              description: Coordinates of the LineString    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              description: BBox coordinates of the Polygon    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            coordinates:    
+              description: Coordinates of the Polygon    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              description: BBox coordinates of the LineString    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            coordinates:    
+              description: Coordinates of the MulitPoint    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              description: BBox coordinates of the LineString    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            coordinates:    
+              description: Coordinates of the MultiLineString    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              description: Coordinates of the MultiPolygon    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+              x-ngsi:    
+                type: Property    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+      x-ngsi:    
+        type: GeoProperty    
+    name:    
+      description: The name of this item    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    owner:    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
+      items:    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    processName:    
+      description: Name or identifier of the related production process    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    seeAlso:    
+      description: list of uri pointing to additional resources about the item    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      x-ngsi:    
+        type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    type:    
+      description: NGSI Entity type. It has to be MaterialAddition    
+      enum:    
+        - MaterialAddition    
+      type: string    
+      x-ngsi:    
+        type: Property    
+  required:    
+    - id    
+    - type    
+    - addedMaterials    
+  type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.IndustrialProcess/blob/master/MaterialAddition/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.ProcessIndustry/MaterialAddition/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
+```  
+</details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## 示例有效载荷  
+#### MaterialAddition NGSI-v2 键值示例  
+这是一个JSON-LD格式的MaterialAddition示例，以键值对形式呈现。当使用`options=keyValues`时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:MaterialAddition:PlantZ:UnitProcessX:75545",  
+  "type": "MaterialAddition",  
+  "dateObserved": "2025-07-17T14:07:00Z",  
+  "processName": "unit_process_x",  
+  "heatNumber": 10001,  
+  "addedMaterials":  
+  [  
+    {  
+      "code": "scrap_type_3",  
+      "mass": 40000,  
+      "category": "scrap",  
+      "chemicalConcentration":  
+      [  
+        {  
+          "substance": "Fe",  
+          "percentage": 0.9973  
+        },  
+        {  
+          "substance": "Cu",  
+          "percentage": 0.0005  
+        }  
+      ],  
+      "specificEnergy": 1.3,  
+      "source": "my-id-1",  
+      "origin": "my-id-2",  
+      "supplier": "ACME",  
+      "materialPrice": 0.02,  
+      "storageAvailability": 250000  
+    }  
+  ]  
+}  
+```  
+</details>  
+#### 材料添加 NGSI-v2 标准化示例  
+这是一个以JSON-LD格式表示的MaterialAddition的示例，并已进行了规范化。在不使用选项时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:MaterialAddition:PlantZ:UnitProcessX:75545",  
+  "type": "MaterialAddition",  
+  "dateObserved": {  
+    "type": "DateTime",  
+    "value": "2025-07-17T14:07:00Z"  
+  },  
+  "processName": {  
+    "type": "Text",  
+    "value": "unit_process_x"  
+  },  
+  "heatNumber": {  
+    "type": "Number",  
+    "value": 10001  
+  },  
+  "addedMaterials": {  
+    "type": "StructuredValue",  
+    "value": [  
+      {  
+        "type": "StructuredValue",  
+        "value": {  
+          "code": {  
+            "type": "Text",  
+            "value": "scrap_type_3"  
+          },  
+          "mass": {  
+            "type": "Number",  
+            "value": 40000  
+          },  
+          "category": {  
+            "type": "Text",  
+            "value": "scrap"  
+          },  
+          "chemicalConcentration": {  
+            "type": "StructuredValue",  
+            "value": [  
+              {  
+                "type": "StructuredValue",  
+                "value": {  
+                  "substance": {  
+                    "type": "Text",  
+                    "value": "Fe"  
+                  },  
+                  "percentage": {  
+                    "type": "Number",  
+                    "value": 0.9973  
+                  }  
+                }  
+              },  
+              {  
+                "type": "StructuredValue",  
+                "value": {  
+                  "substance": {  
+                    "type": "Text",  
+                    "value": "Cu"  
+                  },  
+                  "percentage": {  
+                    "type": "Number",  
+                    "value": 0.0005  
+                  }  
+                }  
+              }  
+            ]  
+          },  
+          "specificEnergy": {  
+            "type": "Number",  
+            "value": 1.3  
+          },  
+          "source": {  
+            "type": "Text",  
+            "value": "my-id-1"  
+          },  
+          "origin": {  
+            "type": "Text",  
+            "value": "my-id-2"  
+          },  
+          "supplier": {  
+            "type": "Text",  
+            "value": "ACME"  
+          },  
+          "materialPrice": {  
+            "type": "Number",  
+            "value": 0.02  
+          },  
+          "storageAvailability": {  
+            "type": "Number",  
+            "value": 250000  
+          }  
+        }  
+      }  
+    ]  
+  }  
+}  
+```  
+</details>  
+#### MaterialAddition NGSI-LD 键值示例  
+以下是一个JSON-LD格式的MaterialAddition示例，以键值对形式呈现。 当使用`options=keyValues`时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/incubated/refs/heads/smartmanufacturing-processindustry/SMARTMANUFACTURING/ProcessIndustry/context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:MaterialAddition:PlantZ:UnitProcessX:75545",  
+  "type": "MaterialAddition",  
+  "dateObserved": "2025-07-17T14:07:00Z",  
+  "processName": "unit_process_x",  
+  "heatNumber": 10001,  
+  "addedMaterials":  
+  [  
+    {  
+      "code": "scrap_type_3",  
+      "mass": 40000,  
+      "category": "scrap",  
+      "chemicalConcentration":  
+      [  
+        {  
+          "substance": "Fe",  
+          "percentage": 0.9973  
+        },  
+        {  
+          "substance": "Cu",  
+          "percentage": 0.0005  
+        }  
+      ],  
+      "specificEnergy": 1.3,  
+      "source": "my-id-1",  
+      "origin": "my-id-2",  
+      "supplier": "ACME",  
+      "materialPrice": 0.02,  
+      "storageAvailability": 250000  
+    }  
+  ]  
+}  
+```  
+</details>  
+#### 材料添加 NGSI-LD 标准化示例  
+这是一个以JSON-LD格式标准化的MaterialAddition的示例。当不使用选项时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/incubated/refs/heads/smartmanufacturing-processindustry/SMARTMANUFACTURING/ProcessIndustry/context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:MaterialAddition:PlantZ:UnitProcessX:75545",  
+  "type": "MaterialAddition",  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2025-07-17T14:07:00Z"  
+    }  
+  },  
+  "processName": {  
+    "type": "Property",  
+    "value": "unit_process_x"  
+  },  
+  "heatNumber": {  
+    "type": "Property",  
+    "value": 10001  
+  },  
+  "addedMaterials": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "type": "Property",  
+        "value": {  
+          "code": {  
+            "type": "Property",  
+            "value": "scrap_type_3"  
+          },  
+          "mass": {  
+            "type": "Property",  
+            "value": 40000  
+          },  
+          "category": {  
+            "type": "Property",  
+            "value": "scrap"  
+          },  
+          "chemicalConcentration": {  
+            "type": "Property",  
+            "value": [  
+              {  
+                "type": "Property",  
+                "value": {  
+                  "substance": {  
+                    "type": "Property",  
+                    "value": "Fe"  
+                  },  
+                  "percentage": {  
+                    "type": "Property",  
+                    "value": 0.9973  
+                  }  
+                }  
+              },  
+              {  
+                "type": "Property",  
+                "value": {  
+                  "substance": {  
+                    "type": "Property",  
+                    "value": "Cu"  
+                  },  
+                  "percentage": {  
+                    "type": "Property",  
+                    "value": 0.0005  
+                  }  
+                }  
+              }  
+            ]  
+          },  
+          "specificEnergy": {  
+            "type": "Property",  
+            "value": 1.3  
+          },  
+          "source": {  
+            "type": "Property",  
+            "value": "my-id-1"  
+          },  
+          "origin": {  
+            "type": "Property",  
+            "value": "my-id-2"  
+          },  
+          "supplier": {  
+            "type": "Property",  
+            "value": "ACME"  
+          },  
+          "materialPrice": {  
+            "type": "Property",  
+            "value": 0.02  
+          },  
+          "storageAvailability": {  
+            "type": "Property",  
+            "value": 250000  
+          }  
+        }  
+      }  
+    ]  
+  }  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+这些数据模型是在ALCHIMIA项目中开发的——数据与去中心化人工智能，旨在促进欧洲冶金业的竞争力和绿色发展。本项目已获得欧盟“地平线2020”研究与创新计划资助，协议编号为101070046。详情请参阅https://alchimia-project.eu/  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+请参阅[常见问题解答 10](https://smartdatamodels.org/index.php/faqs/)，了解如何处理量纲单位的答案。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
