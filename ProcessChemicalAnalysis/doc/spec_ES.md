@@ -1,7 +1,7 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entidad: Análisis químico del proceso  
-=====================================<!-- /10-Header -->  
+Entidad: ProcessChemicalAnalysis  
+================================<!-- /10-Header -->  
 <!-- 15-License -->  
 [Licencia Abierta](https://github.com/smart-data-models//dataModel.IndustrialProcess/blob/master/ProcessChemicalAnalysis/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
@@ -15,26 +15,26 @@
 ## Lista de propiedades  
 
 <sup><sub>[*] Si no hay un tipo en un atributo es porque podría tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `address[object]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Error: An unexpected error occurred during translation.    
-	- `postOfficeBoxNumber[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Error: An unexpected error occurred during translation.    
-- `alternateName[string]`: Error: An unexpected error occurred during translation.  - `areaServed[string]`: Error: An unexpected error occurred during translation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Error: An unexpected error occurred during translation.  	- `chemicalConcentration[array]`: Error: An unexpected error occurred during translation.    
-	- `sampleNumber[number]`: Error: An unexpected error occurred during translation.    
-- `dataProvider[string]`: Error: An unexpected error occurred during translation.  - `dateCreated[date-time]`: Error: An unexpected error occurred during translation.  - `dateModified[date-time]`: Error: An unexpected error occurred during translation.  - `dateObserved[date-time]`: Error: An unexpected error occurred during translation.  - `description[string]`: Error: An unexpected error occurred during translation.  - `heatNumber[number]`: Error: An unexpected error occurred during translation.  - `id[*]`: Error: An unexpected error occurred during translation.  - `location[*]`: Error: An unexpected error occurred during translation.  - `name[string]`: Error: An unexpected error occurred during translation.  - `owner[array]`: Error: An unexpected error occurred during translation.  - `processName[string]`: Error: An unexpected error occurred during translation.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el elemento  - `source[string]`: Una secuencia de caracteres que proporciona la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completo del proveedor de la fuente o la URL del objeto de la fuente.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser ProcessChemicalAnalysis  <!-- /30-PropertiesList -->  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localidad en la que se encuentra la dirección de la calle, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, es gestionada por el gobierno local.    
+	- `postOfficeBoxNumber[string]`: El número de apartado postal para las direcciones de apartado postal. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Número que identifica una propiedad específica en una calle pública    
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: El área geográfica donde se ofrece un servicio o un artículo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalAnalysis[object]`: Información sobre el análisis químico realizado  	- `chemicalConcentration[array]`: Los componentes en la composición química del material    
+	- `sampleNumber[number]`: Número de muestra si se toman varias muestras durante un proceso.    
+- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Marca de tiempo de creación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento.  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Normalmente la asignará la plataforma de almacenamiento.  - `dateObserved[date-time]`: Fecha de la entidad observada definida por el usuario  - `description[string]`: Una descripción de este artículo  - `heatNumber[number]`: Número de calor de producción relacionado  - `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los IDs únicos del(los) propietario(s).  - `processName[string]`: Nombre o identificador del proceso de producción relacionado  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el elemento  - `source[string]`: Una secuencia de caracteres que proporciona la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser ProcessChemicalAnalysis  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `chemicalAnalysis`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-Este modelo de datos entrega información relacionada con los análisis químicos realizados en una planta de procesos. El modelo de datos se ha desarrollado a partir de las necesidades de la fabricación de acero, pero se espera que estructuras de datos similares sean apropiadas también en otras áreas de aplicación. El proceso puede ser un proceso por lotes o continuo.  
+Este modelo de datos entrega datos relacionados con análisis químicos realizados en una planta de procesos. El modelo de datos se ha desarrollado a partir de las necesidades de la siderurgia, pero se espera que estructuras de datos similares sean apropiadas en otras áreas de aplicación también. El proceso puede ser por lotes o continuo.  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de propiedades  
-Ordenado alfabéticamente (haz clic para más detalles)  
+## Descripción de propiedades del modelo de datos  
+Ordenado alfabéticamente (haga clic para ver los detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -464,8 +464,8 @@ ProcessChemicalAnalysis:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Ejemplos de cargas útiles  
-#### Ejemplo de valores clave NGSI-v2 de Análisis Químico de Procesos  
-Aquí hay un ejemplo de un ProcessChemicalAnalysis en formato JSON-LD como pares clave-valor. Esto es compatible con NGSI-v2 cuando se usa `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### Ejemplo de pares clave-valor NGSI-v2 de ProcessChemicalAnalysis  
+Aquí hay un ejemplo de un Análisis Químico de Proceso en formato JSON-LD como pares clave-valor. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -492,8 +492,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-#### Ejemplo normalizado NGSI-v2 de análisis químico del proceso  
-Aquí hay un ejemplo de un ProcessChemicalAnalysis en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Ejemplo normalizado NGSI-v2 de Proceso de Análisis Químico  
+Aquí hay un ejemplo de ProcessChemicalAnalysis en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -554,8 +554,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-#### Ejemplo de valores clave NGSI-LD para el análisis químico del proceso  
-Aquí hay un ejemplo de un ProcessChemicalAnalysis en formato JSON-LD como pares clave-valor. Esto es compatible con NGSI-LD cuando se usa `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### Ejemplo de valores clave NGSI-LD para Análisis Químico del Proceso  
+Aquí hay un ejemplo de un ProcessChemicalAnalysis en formato JSON-LD como pares clave-valor. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -585,8 +585,8 @@ ProcessChemicalAnalysis:
 }  
 ```  
 </details>  
-#### Ejemplo normalizado NGSI-LD de análisis químico de proceso  
-Aquí hay un ejemplo de ProcessChemicalAnalysis en formato JSON-LD como normalizado. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Proceso de Análisis Químico Ejemplo normalizado NGSI-LD  
+Aquí hay un ejemplo de un ProcessChemicalAnalysis en formato JSON-LD normalizado. Esto es compatible con NGSI-LD sin usar opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -654,10 +654,10 @@ ProcessChemicalAnalysis:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
-Estos modelos de datos fueron desarrollados en el proyecto ALCHIMIA - Datos e inteligencia artificial descentralizada para una industria metalúrgica europea competitiva y ecológica. Este proyecto ha recibido financiación del programa de investigación e innovación Horizonte 2020 de la Unión Europea en virtud del acuerdo de subvención n.º 101070046. Ver https://alchimia-project.eu/  
+Estos modelos de datos fueron desarrollados en el proyecto ALCHIMIA - Datos e inteligencia artificial descentralizada para una industria metalúrgica europea competitiva y verde. Este proyecto ha recibido financiación del programa de investigación e innovación Horizonte 2020 de la Unión Europea bajo el acuerdo de subvención n.º 101070046. Véase https://alchimia-project.eu/  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulta [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
+Consulta [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo manejar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
