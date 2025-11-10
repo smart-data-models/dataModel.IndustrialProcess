@@ -1,0 +1,3 @@
+/* (Beta) Export of data model MaterialAddition of the subject dataModel.IndustrialProcess for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE MaterialAddition_type AS ENUM ('MaterialAddition');
+CREATE TABLE MaterialAddition (addedMaterials JSON, address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, dateObserved TIMESTAMP, description TEXT, heatNumber NUMERIC, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, processName TEXT, seeAlso JSON, source TEXT, type MaterialAddition_type);
